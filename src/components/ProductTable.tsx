@@ -51,7 +51,7 @@ interface EditableDeductionField {
 const ProductTable: React.FC = () => {
   const [deductionList, setDeductionList] = useState<string[]>(DEDUCTION_LIST);
   const [deductions, setDeductions] = useState<Deduction[]>([
-    { id: 1, name: "Professional Tax", calculation: 0, monthlyAmount: 20000 },
+    { id: 54651321, name: "Professional Tax", calculation: 0, monthlyAmount: 20000 },
   ]);
 
   const [editableDeductionField, setEditableDeductionField] =
