@@ -18,6 +18,7 @@ import {
   FormControl,
   InputLabel,
   MenuItem,
+  Box,
 } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
 
@@ -176,7 +177,17 @@ const ProductTable: React.FC = () => {
                           helperText={errors.deductions?.[index]?.calculation}
                         />
                       ) : (
-                        <>₹{Number(deduction.calculation).toLocaleString()}</>
+                        <Box
+                          sx={{
+                            border: "1px solid gray",
+                            px: 2,
+                            py: 1,
+                            borderRadius: 1,
+                            textAlign: "center",
+                          }}
+                        >
+                          ₹{Number(deduction.calculation).toLocaleString()}
+                        </Box>
                       )}
                     </TableCell>
 
@@ -218,7 +229,16 @@ const ProductTable: React.FC = () => {
                           helperText={errors.deductions?.[index]?.monthlyAmount}
                         />
                       ) : (
-                        <>₹{Number(deduction.monthlyAmount).toLocaleString()}</>
+                        <Box
+                          sx={{
+                            border: "1px solid gray",
+                            px: 2,
+                            py: 1,
+                            borderRadius: 1,
+                          }}
+                        >
+                          ₹{Number(deduction.monthlyAmount).toLocaleString()}
+                        </Box>
                       )}
                     </TableCell>
 
